@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let getdata = async () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(455)
+                }, 3000);
+            })
+        }
+    async function main() { //to use await fucntion have to use this fucntion
+        console.log("loading module")
+        console.log("do something else")
+        console.log("load data")
+        
+        const data = await getdata() //if not await then wont take pause here
+        console.log(data)
+
+        console.log("process data")
+    }
+    main()
+    //previous file also does the same thing but this is eff and easy
+    //async/await >>>>>> .then
+</script>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    async function getdata(url) {
+        let x = await fetch(url)  //finishes this promise
+        let data = await x.json() //converts to JS OBJECT which is also a promise
+        return data
+    }
+
+    async function main() {
+        console.log("retriving data from source through API")
+        console.log("retriving data from source through API")
+        console.log("retriving data from source through API")
+        let data = await getdata('https://jsonplaceholder.typicode.com/todos/1') //paused and got thedata
+        console.log(data)
+        console.log("API acknowledged")
+    }
+</script>
+
+<body>
+</body>
+
+</html>

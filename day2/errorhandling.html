@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let a = prompt("enter the value of a")
+    let b = prompt("enter the value of b")
+
+    try {
+        console.log(a*x)
+    } catch (error) {
+        console.log("KYA KR RHA BHAI")
+        console.log(error.a)
+    }
+
+    if(isNaN(a) || isNaN(b)){
+        throw SyntaxError("INVALID")
+    }
+    
+    let sum1= a+b
+    let sum2= parseInt(a) + parseInt(b)
+    console.log(sum1,sum2)
+    //but when taking input through prompt then have to convert a and b to int
+
+
+
+</script>
+<body>
+</body>
+</html>

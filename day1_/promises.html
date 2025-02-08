@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let p1 = new Promise((resolve, reject) => {
+        let a = Math.random();
+        if (a < 0.5) {
+            console.log("im not done")
+            reject(8)
+        }
+        else {
+            console.log("im done")
+            resolve(5)
+        }
+
+    })
+
+    p1.then((a)=>{
+        console.log("the code is " + a)
+    })
+    p1.catch((a)=>{
+        console.log("the code is " + a)
+    })
+    p1.finally((a)=>{
+        console.log("the code is  given")
+    })
+    //when using finally then itll show the content after getting the return value
+
+</script>
+
+<body>
+
+</body>
+
+</html>

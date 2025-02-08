@@ -1,0 +1,48 @@
+variable 
+var(global inside function) , let(temp,under parenthesis) , const(unchangeble)
+
+function ourFunction(a,b){
+    console.log("hello World");
+    console.log(a+b);
+}
+== value
+=== type
+
+Math.round,Math.pow,Math.sqrt
+
+function fun1(){
+    console.log("hello");
+}
+fun1()
+
+let value = function(){
+    console.log("hello");
+}
+value(); //function expression haves function as a value
+
+
+const value = () => {
+    console.log("hello");
+}
+value(); //arrow function
+
+
+const value = (a,b) => {
+    console.log("hello");
+}
+value(2,5); // passing para
+
+
+const loadscript=(src,callback)=>{
+    let sc = document.createelement("script"); //creating html section "script"
+    sc.src= src; //sc->src=src
+    sc.onload = callback("harry");  //when src loaded then callback function gets called......onload is an event that occurs when the script has finished loading.
+    document.head.append(sc); // appending the html to head to make it fucntional
+}
+
+
+
+addeventlisteners can work on ID easily rather than claasses so work on ID than on claasses,,,queryselector can be used to use class,,,if using functionto invoke it use tabindex=0in div section
+
+
+div.first->div.second->div.third then event listener will listen to all if click on third , will listen 2 if click on second so thats why to stop propogation we use e.stopPorogation();

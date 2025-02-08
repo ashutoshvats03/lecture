@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    console.log("loading module")
+    console.log("do something else")
+    console.log("load data")
+
+    // let getdata = () => {
+    //     return new Promise((resolve,reject)=>{
+    //         setTimeout(()=>{
+    //             resolve(455)
+    //         },3000);
+    //     })
+    // }
+    // const data = getdata()
+    // console.log(data)
+
+    // console.log("process data")
+    // //data will be coming in 3 sec till then it promises that youll get data when promise will be resolved..so it finished the further instructions
+
+    let getdata = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(455)
+            }, 3000);
+        })
+    }
+    const data = getdata()
+
+    data.then((v)=> {
+        console.log(data)
+        console.log("process data")
+    })
+
+    //here we used then statement to just pause the steps till we get the value
+
+</script>
+
+<body>
+
+</body>
+
+</html>

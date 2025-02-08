@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // const obj={a:1 , b:2}
+    // // console.log(obj.a,obj.b)
+    // const {a,b}=obj
+    // console.log(a,b)
+
+
+    
+    // let arr =[1,4,5,8,9,6]
+    // let [x ,y ,...rest] =arr
+    // console.log(x,y,rest)
+    // let [c , d,e]=arr
+    // console.log(c,d,e)
+
+
+
+    let arr =[1,4,5,6,8,9]
+    // const obj ={...arr}
+    // const array =[...arr]
+    // console.log(obj)
+    // console.log(array)
+    function sum(a,b,c){
+        return a+b+c
+    }
+    console.log(sum(arr[0],arr[1],arr[2]))
+    console.log(sum(...arr))
+    //...arr is a SPREAD OPERATOR 
+
+</script>
+<body>
+</body>
+</html>

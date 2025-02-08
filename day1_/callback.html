@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<script>
+    console.log("first")
+    console.log("second")
+    setTimeout(()=>{
+        console.log("first timeout")
+    },1000)
+    let callling_function=(arg)=>{
+        console.log(arg);
+    }
+    const loadscript =(src,callling_function)=>{
+        let sc = document.createElement("script");
+        sc.src=src;
+        src.onload = console.log("fourth");
+        src.onload = callling_function("third")
+        document.head.append(sc);
+    }
+    setTimeout(()=>{
+        console.log("second timeout")
+    },1000)
+    console.log("hurray")
+
+    loadscript("https://www.youtube.com/watch?v=57SrCBCxdgc",callling_function)
+
+</script>
+<body>
+    
+</body>
+</html>
+
+//settimeouts are async function and will be invoked when all other fucntion will be called so to get desired result we had to call sync function thats loadsxcript fucntion which tells what to do when one thing comes to ends...here when link gets loaded then the desired text will come......when callback->callback->callback then the callback hell comes
